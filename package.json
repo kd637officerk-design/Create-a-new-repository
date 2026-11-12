@@ -17,19 +17,10 @@
   "build": {
     "appId": "com.skeletor.video",
     "productName": "Skeletor Video",
-    "directories": {
-      "output": "dist"
-    },
-    "files": [
-      "www/**/*",
-      "electron/**/*",
-      "package.json"
-    ],
+    "directories": { "output": "dist" },
+    "files": ["www/**/*", "electron/**/*", "package.json"],
     "win": {
-      "target": [
-        "nsis",
-        "portable"
-      ],
+      "target": ["nsis", "portable"],
       "icon": "www/assets/icon.ico"
     },
     "nsis": {
@@ -43,33 +34,16 @@
       "installerIcon": "www/assets/icon.ico",
       "uninstallerIcon": "www/assets/icon.ico"
     },
-    "fileAssociations": [
-      {
-        "ext": [
-          "mp4",
-          "mkv",
-          "avi",
-          "mov",
-          "wmv",
-          "webm",
-          "m4v",
-          "mpeg",
-          "mpg",
-          "ts",
-          "mp3",
-          "m4a",
-          "wav",
-          "flac",
-          "ogg"
-        ],
-        "name": "Skeletor Video Media",
-        "role": "Viewer",
-        "isDefault": true
-      }
-    ],
     "portable": {
       "artifactName": "Skeletor-Video-Portable-${version}.${ext}"
-    }
+    },
+    "fileAssociations": [
+      {
+        "ext": ["mp4","mkv","avi","mov","wmv","webm","m4v","mpeg","mpg","ts","mp3","m4a","wav","flac","ogg"],
+        "name": "Skeletor Video Media",
+        "role": "Viewer"
+      }
+    ]
   },
   "dependencies": {
     "@capacitor/core": "^6.2.1",
